@@ -54,8 +54,29 @@ function M.attach()
 		return
 	end
 	attached = true
+	local group = vim.api.nvim_create_augroup("theme734", { clear = true })
+	-- a guicursor set after `:colorscheme 734` would drop Cursor/lCursor, so
+	-- re-attach on change. OptionSet doesn't fire during startup, so VimEnter
+	-- catches the init.lua that sets it after loading the colorscheme.
+	local function reattach()
+		if is_734() then
+			set_cursor()
+		end
+	end
+	vim.api.nvim_create_autocmd("OptionSet", {
+		group = group,
+		pattern = "guicursor",
+		desc = "734: re-attach Cursor after guicursor changes",
+		callback = reattach,
+	})
+	vim.api.nvim_create_autocmd("VimEnter", {
+		group = group,
+		once = true,
+		desc = "734: re-attach Cursor after startup",
+		callback = reattach,
+	})
 	vim.api.nvim_create_autocmd("TextYankPost", {
-		group = vim.api.nvim_create_augroup("theme734", { clear = true }),
+		group = group,
 		desc = "734: orange yank flash",
 		callback = function()
 			if vim.g.theme734_yank == false or not is_734() then

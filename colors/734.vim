@@ -7,7 +7,7 @@ highlight EndOfBuffer guifg=#505050
 highlight TermCursor cterm=reverse gui=reverse
 highlight NonText guifg=#505050
 highlight Directory ctermfg=14 guifg=#7cafc2
-highlight ErrorMsg ctermfg=9 guifg=#ab4642 guibg=#101010
+highlight ErrorMsg ctermfg=9 guifg=#ab4642 guibg=#000000
 highlight IncSearch guifg=#202020 guibg=#dc9656
 highlight Search ctermfg=0 ctermbg=11 guifg=#202020 guibg=#f7ca88
 highlight CurSearch ctermfg=0 ctermbg=11 guifg=#202020 guibg=#dc9656
@@ -60,14 +60,14 @@ highlight CursorLine guibg=#202020
 highlight ColorColumn guibg=#181818
 highlight QuickFixLine ctermfg=14 guibg=#202020
 highlight Whitespace guifg=#505050
-highlight NormalNC guifg=#d0d0d0 guibg=#101010
+highlight NormalNC guifg=#d0d0d0 guibg=#000000
 highlight MsgSeparator guifg=#b0b0b0 guibg=#2b2b2b
-highlight NormalFloat guifg=#d0d0d0 guibg=#202020
-highlight MsgArea guifg=#d0d0d0 guibg=#101010
+highlight NormalFloat guifg=#d0d0d0 guibg=#000000
+highlight MsgArea guifg=#d0d0d0 guibg=#000000
 highlight! link FloatBorder NormalFloat
 highlight WinBar cterm=bold guifg=#b0b0b0 guibg=#2b2b2b
 highlight WinBarNC cterm=bold guifg=#505050 guibg=#202020
-highlight Cursor guifg=#101010 guibg=#ff6900
+highlight Cursor guifg=#000000 guibg=#ff6900
 highlight! link FloatTitle Title
 highlight! link FloatFooter FloatTitle
 highlight! link StatusLineTerm StatusLine
@@ -76,15 +76,15 @@ highlight! link StderrMsg ErrorMsg
 
 highlight RedrawDebugNormal cterm=reverse gui=reverse
 highlight Underlined cterm=underline gui=underline
-highlight lCursor guifg=#101010 guibg=#ff6900
-highlight CursorIM guifg=#101010 guibg=#ff6900
+highlight lCursor guifg=#000000 guibg=#ff6900
+highlight CursorIM guifg=#000000 guibg=#ff6900
 
 highlight Substitute guifg=#202020 guibg=#f7ca88
 highlight VisualNOS guifg=#ab4642
-highlight Normal guifg=#d0d0d0 guibg=#101010
+highlight Normal guifg=#d0d0d0 guibg=#000000
 highlight Character guifg=#ab4642
 highlight Constant guifg=#dc9656
-highlight Number guifg=#dc9656 guibg=#101010
+highlight Number guifg=#dc9656 guibg=#000000
 highlight Boolean guifg=#dc9656
 highlight Float guifg=#dc9656
 highlight Conditional guifg=#ba8baf
@@ -241,7 +241,7 @@ highlight MatchParen cterm=bold,underline guibg=#2b2b2b
 highlight RedrawDebugClear ctermfg=0 ctermbg=11 guibg=NvimDarkYellow
 highlight RedrawDebugComposed ctermfg=0 ctermbg=10 guibg=NvimDarkGreen
 highlight RedrawDebugRecompose ctermfg=0 ctermbg=9 guibg=NvimDarkRed
-highlight Error ctermfg=0 ctermbg=9 guifg=#101010 guibg=#ab4642
+highlight Error ctermfg=0 ctermbg=9 guifg=#000000 guibg=#ab4642
 highlight DiagnosticUnderlineError cterm=underline gui=underline guisp=#ab4642
 highlight DiagnosticUnderlineWarn cterm=underline gui=underline guisp=#ba8baf
 highlight DiagnosticUnderlineInfo cterm=underline gui=underline guisp=#86c1b9
@@ -496,16 +496,16 @@ highlight! link MiniDiffOverChangeBuf MiniDiffOverChange
 highlight! link MiniDiffOverContext DiffChange
 
 highlight! link MiniDiffOverDelete DiffDelete
-highlight MiniHipatternsFixme gui=bold guifg=#101010 guibg=#ab4642
-highlight MiniHipatternsHack gui=bold guifg=#101010 guibg=#ba8baf
-highlight MiniHipatternsNote gui=bold guifg=#101010 guibg=#7cafc2
-highlight MiniHipatternsTodo gui=bold guifg=#101010 guibg=#86c1b9
+highlight MiniHipatternsFixme gui=bold guifg=#000000 guibg=#ab4642
+highlight MiniHipatternsHack gui=bold guifg=#000000 guibg=#ba8baf
+highlight MiniHipatternsNote gui=bold guifg=#000000 guibg=#7cafc2
+highlight MiniHipatternsTodo gui=bold guifg=#000000 guibg=#86c1b9
 highlight MiniIndentscopeSymbol guifg=#a16946
 highlight MiniIndentscopeSymbolOff guifg=#ab4642
 highlight! link MiniJump SpellRare
 highlight! link MiniJump2dDim Comment
 highlight MiniJump2dSpot gui=bold,nocombine guifg=#fafafa guibg=#202020
-highlight MiniJump2dSpotAhead gui=nocombine guifg=#e0e0e0 guibg=#101010
+highlight MiniJump2dSpotAhead gui=nocombine guifg=#e0e0e0 guibg=#000000
 highlight! link MiniJump2dSpotUnique MiniJump2dSpot
 highlight MiniMapNormal guifg=#d0d0d0 guibg=#202020
 highlight MiniMapSymbolCount guifg=#86c1b9
@@ -545,12 +545,12 @@ highlight MiniStatuslineDevinfo guifg=#b0b0b0 guibg=#2b2b2b
 highlight! link MiniStatuslineFileinfo MiniStatuslineDevinfo
 highlight MiniStatuslineFilename guifg=#505050 guibg=#202020
 highlight! link MiniStatuslineInactive StatusLineNC
-highlight MiniStatuslineModeCommand gui=bold guifg=#101010 guibg=#ab4642
-highlight MiniStatuslineModeInsert gui=bold guifg=#101010 guibg=#7cafc2
-highlight MiniStatuslineModeNormal gui=bold guifg=#101010 guibg=#d0d0d0
-highlight MiniStatuslineModeOther gui=bold guifg=#101010 guibg=#505050
-highlight MiniStatuslineModeReplace gui=bold guifg=#101010 guibg=#ba8baf
-highlight MiniStatuslineModeVisual gui=bold guifg=#101010 guibg=#a1b56c
+highlight MiniStatuslineModeCommand gui=bold guifg=#000000 guibg=#ab4642
+highlight MiniStatuslineModeInsert gui=bold guifg=#000000 guibg=#7cafc2
+highlight MiniStatuslineModeNormal gui=bold guifg=#000000 guibg=#d0d0d0
+highlight MiniStatuslineModeOther gui=bold guifg=#000000 guibg=#505050
+highlight MiniStatuslineModeReplace gui=bold guifg=#000000 guibg=#ba8baf
+highlight MiniStatuslineModeVisual gui=bold guifg=#000000 guibg=#a1b56c
 highlight MiniTestEmphasis gui=bold
 highlight MiniTestFail gui=bold guifg=#ab4642
 highlight MiniTestPass gui=bold guifg=#a1b56c
@@ -563,8 +563,8 @@ highlight! link BufferLineCloseButton BufferLineBackground
 highlight! link BufferLineCloseButtonSelected BufferLineBufferSelected
 highlight! link BufferLineCloseButtonVisible BufferLineBufferVisible
 highlight! link BufferLineFill Normal
-highlight BufferLineTab guifg=#101010 guibg=#f7ca88
-highlight BufferLineTabSelected gui=bold guifg=#101010 guibg=#f7ca88
+highlight BufferLineTab guifg=#000000 guibg=#f7ca88
+highlight BufferLineTabSelected gui=bold guifg=#000000 guibg=#f7ca88
 highlight HydraRed guifg=#ab4642
 highlight HydraBlue guifg=#7cafc2
 highlight HydraAmaranth guifg=#ba8baf
@@ -694,9 +694,9 @@ highlight! link FzfLuaPathLineNr DiagnosticInfo
 highlight! link FzfLuaTabMarker DiagnosticHint
 highlight! link FzfLuaTabTitle Title
 highlight! link FzfLuaTitle FloatTitle
-highlight Sneak guifg=#101010 guibg=#ba8baf
-highlight SneakScope guifg=#101010 guibg=#fafafa
-highlight SneakLabel gui=bold guifg=#101010 guibg=#ba8baf
+highlight Sneak guifg=#000000 guibg=#ba8baf
+highlight SneakScope guifg=#000000 guibg=#fafafa
+highlight SneakLabel gui=bold guifg=#000000 guibg=#ba8baf
 highlight! link BqfPreviewFloat NormalFloat
 highlight BqfPreviewTitle guifg=#7cafc2 guibg=#202020
 highlight BqfSign guifg=#86c1b9 guibg=#202020
@@ -805,37 +805,37 @@ highlight HelpviewMentionlink gui=underline
 highlight HelpviewOptionlink gui=underline guifg=#7cafc2
 highlight HelpviewTaglink gui=bold guifg=#f7ca88
 highlight! link HelpviewTitle Title
-highlight MarkviewPalette0 guifg=#ba8baf guibg=#101010
+highlight MarkviewPalette0 guifg=#ba8baf guibg=#000000
 highlight MarkviewPalette0Fg guifg=#ba8baf
-highlight MarkviewPalette0Bg guibg=#101010
+highlight MarkviewPalette0Bg guibg=#000000
 highlight MarkviewPalette0Sign guifg=#ba8baf
-highlight MarkviewPalette1 guifg=#ab4642 guibg=#101010
+highlight MarkviewPalette1 guifg=#ab4642 guibg=#000000
 highlight MarkviewPalette1Fg guifg=#ab4642
-highlight MarkviewPalette1Bg guibg=#101010
+highlight MarkviewPalette1Bg guibg=#000000
 highlight MarkviewPalette1Sign guifg=#ab4642
-highlight MarkviewPalette2 guifg=#dc9656 guibg=#101010
+highlight MarkviewPalette2 guifg=#dc9656 guibg=#000000
 highlight MarkviewPalette2Fg guifg=#dc9656
-highlight MarkviewPalette2Bg guibg=#101010
+highlight MarkviewPalette2Bg guibg=#000000
 highlight MarkviewPalette2Sign guifg=#dc9656
-highlight MarkviewPalette3 guifg=#f7ca88 guibg=#101010
+highlight MarkviewPalette3 guifg=#f7ca88 guibg=#000000
 highlight MarkviewPalette3Fg guifg=#f7ca88
-highlight MarkviewPalette3Bg guibg=#101010
+highlight MarkviewPalette3Bg guibg=#000000
 highlight MarkviewPalette3Sign guifg=#f7ca88
-highlight MarkviewPalette4 guifg=#a1b56c guibg=#101010
+highlight MarkviewPalette4 guifg=#a1b56c guibg=#000000
 highlight MarkviewPalette4Fg guifg=#a1b56c
-highlight MarkviewPalette4Bg guibg=#101010
+highlight MarkviewPalette4Bg guibg=#000000
 highlight MarkviewPalette4Sign guifg=#a1b56c
-highlight MarkviewPalette5 guifg=#86c1b9 guibg=#101010
+highlight MarkviewPalette5 guifg=#86c1b9 guibg=#000000
 highlight MarkviewPalette5Fg guifg=#86c1b9
-highlight MarkviewPalette5Bg guibg=#101010
+highlight MarkviewPalette5Bg guibg=#000000
 highlight MarkviewPalette5Sign guifg=#86c1b9
-highlight MarkviewPalette6 guifg=#7cafc2 guibg=#101010
+highlight MarkviewPalette6 guifg=#7cafc2 guibg=#000000
 highlight MarkviewPalette6Fg guifg=#7cafc2
-highlight MarkviewPalette6Bg guibg=#101010
+highlight MarkviewPalette6Bg guibg=#000000
 highlight MarkviewPalette6Sign guifg=#7cafc2
-highlight MarkviewPalette7 guifg=#a16946 guibg=#101010
+highlight MarkviewPalette7 guifg=#a16946 guibg=#000000
 highlight MarkviewPalette7Fg guifg=#a16946
-highlight MarkviewPalette7Bg guibg=#101010
+highlight MarkviewPalette7Bg guibg=#000000
 highlight MarkviewPalette7Sign guifg=#a16946
 highlight HopNextKey gui=bold,nocombine guifg=#ba8baf
 highlight HopNextKey1 gui=bold,nocombine guifg=#ab4642
@@ -873,10 +873,10 @@ highlight! link NotifyTRACETitle NotifyTRACEBorder
 highlight NotifyWARNBorder guifg=#ba8baf
 highlight! link NotifyWARNIcon NotifyWARNBorder
 highlight! link NotifyWARNTitle NotifyWARNBorder
-highlight PounceMatch gui=bold,nocombine guifg=#101010 guibg=#d0d0d0
-highlight PounceGap gui=bold,nocombine guifg=#101010 guibg=#505050
-highlight PounceAccept gui=bold,nocombine guifg=#101010 guibg=#ab4642
-highlight PounceAcceptBest gui=bold,nocombine guifg=#101010 guibg=#a1b56c
+highlight PounceMatch gui=bold,nocombine guifg=#000000 guibg=#d0d0d0
+highlight PounceGap gui=bold,nocombine guifg=#000000 guibg=#505050
+highlight PounceAccept gui=bold,nocombine guifg=#000000 guibg=#ab4642
+highlight PounceAcceptBest gui=bold,nocombine guifg=#000000 guibg=#a1b56c
 highlight BufferCurrent gui=bold guifg=#d0d0d0 guibg=#2b2b2b
 highlight BufferCurrentIcon guibg=#2b2b2b
 highlight! link BufferCurrentIndex BufferCurrentIcon
@@ -899,19 +899,19 @@ highlight BufferVisibleMod gui=bold guifg=#ab4642 guibg=#202020
 highlight! link BufferVisibleSign BufferVisible
 highlight BufferVisibleTarget gui=bold guifg=#ba8baf guibg=#202020
 highlight MasonError guifg=#ab4642
-highlight MasonHeader gui=bold guifg=#101010 guibg=#7cafc2
-highlight MasonHeaderSecondary gui=bold guifg=#101010 guibg=#a16946
+highlight MasonHeader gui=bold guifg=#000000 guibg=#7cafc2
+highlight MasonHeaderSecondary gui=bold guifg=#000000 guibg=#a16946
 highlight! link MasonHeading Bold
 highlight MasonHighlight guifg=#a16946
-highlight MasonHighlightBlock guifg=#101010 guibg=#a16946
+highlight MasonHighlightBlock guifg=#000000 guibg=#a16946
 highlight! link MasonHighlightBlockBold MasonHeaderSecondary
 highlight! link MasonHighlightBlockBoldSecondary MasonHeader
-highlight MasonHighlightBlockSecondary guifg=#101010 guibg=#7cafc2
+highlight MasonHighlightBlockSecondary guifg=#000000 guibg=#7cafc2
 highlight MasonHighlightSecondary guifg=#7cafc2
 highlight! link MasonLink MasonHighlight
 highlight! link MasonMuted Comment
-highlight MasonMutedBlock guifg=#101010 guibg=#505050
-highlight MasonMutedBlockBold gui=bold guifg=#101010 guibg=#505050
+highlight MasonMutedBlock guifg=#000000 guibg=#505050
+highlight MasonMutedBlockBold gui=bold guifg=#000000 guibg=#505050
 highlight! link vimTodo Todo
 highlight! link vimBang vimOper
 highlight! link vimCommand Statement
@@ -1515,5 +1515,5 @@ highlight! link vim9Vim9Script vimCommand
 
 
 " orange yank flash, wired up by lua/theme734.lua
-highlight Yank734 guifg=#101010 guibg=#ff6900
+highlight Yank734 guifg=#000000 guibg=#ff6900
 lua require("theme734").attach()
