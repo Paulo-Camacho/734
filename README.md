@@ -41,6 +41,8 @@ return {
 -- ~/.config/nvim/init.lua
 vim.pack.add({ "https://github.com/Paulo-Camacho/734" })
 vim.cmd.colorscheme("734")
+or
+vim.cmd.colorscheme("734-light")
 ```
 
 ### Manual
