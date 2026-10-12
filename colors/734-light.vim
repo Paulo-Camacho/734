@@ -16,7 +16,7 @@ highlight ModeMsg ctermfg=10 guifg=#26a269
 highlight LineNr guifg=#5e5c64
 highlight LineNrAbove guifg=#77767b
 highlight LineNrBelow guifg=#77767b
-highlight CursorLineNr cterm=bold guifg=#5e5c64 guibg=#f2f2f2
+highlight CursorLineNr cterm=bold guifg=#ff6900 guibg=#f2f2f2
 highlight CursorLineSign guifg=#77767b guibg=#f2f2f2
 highlight CursorLineFold guifg=#2190a4 guibg=#f2f2f2
 highlight Question ctermfg=14 guifg=#1c71d8
@@ -702,16 +702,16 @@ highlight SneakLabel gui=bold guifg=#241f31 guibg=#dc8add
 highlight! link BqfPreviewFloat NormalFloat
 highlight BqfPreviewTitle guifg=#1c71d8 guibg=#f2f2f2
 highlight BqfSign guifg=#2190a4 guibg=#f2f2f2
-highlight GitSignsAdd guifg=#26a269 guibg=#f2f2f2
+highlight GitSignsAdd guifg=#26a269
 highlight! link GitSignsAddLn GitSignsAdd
 highlight! link GitSignsAddInline GitSignsAdd
-highlight GitSignsChange guifg=#9141ac guibg=#f2f2f2
+highlight GitSignsChange guifg=#c88800
 highlight! link GitSignsChangeLn GitSignsChange
 highlight! link GitSignsChangeInline GitSignsChange
-highlight GitSignsDelete guifg=#c01c28 guibg=#f2f2f2
+highlight GitSignsDelete guifg=#c01c28
 highlight! link GitSignsDeleteLn GitSignsDelete
 highlight! link GitSignsDeleteInline GitSignsDelete
-highlight GitSignsUntracked guifg=#1c71d8 guibg=#f2f2f2
+highlight GitSignsUntracked guifg=#1c71d8
 highlight! link GitSignsUntrackedLn GitSignsUntracked
 highlight! link GitSignsUntrackedInline GitSignsUntracked
 highlight IndentBlanklineChar gui=nocombine guifg=#dcdcdc

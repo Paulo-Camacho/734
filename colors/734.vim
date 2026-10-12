@@ -16,11 +16,11 @@ highlight ModeMsg ctermfg=10 guifg=#a1b56c
 highlight LineNr guifg=#b0b0b0
 highlight LineNrAbove guifg=#505050
 highlight LineNrBelow guifg=#505050
-highlight CursorLineNr cterm=bold guifg=#b0b0b0 guibg=#202020
+highlight CursorLineNr cterm=bold guifg=#ff6900 guibg=#202020
 highlight CursorLineSign guifg=#505050 guibg=#202020
 highlight CursorLineFold guifg=#86c1b9 guibg=#202020
 highlight Question ctermfg=14 guifg=#7cafc2
-highlight StatusLine cterm=reverse guifg=#b0b0b0 guibg=#2b2b2b
+highlight StatusLine cterm=reverse guifg=#b0b0b0 guibg=#000000
 highlight StatusLineNC cterm=bold,underline guifg=#505050 guibg=#202020
 highlight WinSeparator guifg=#2b2b2b guibg=#2b2b2b
 highlight VertSplit guifg=#2b2b2b guibg=#2b2b2b
@@ -700,16 +700,16 @@ highlight SneakLabel gui=bold guifg=#000000 guibg=#ba8baf
 highlight! link BqfPreviewFloat NormalFloat
 highlight BqfPreviewTitle guifg=#7cafc2 guibg=#202020
 highlight BqfSign guifg=#86c1b9 guibg=#202020
-highlight GitSignsAdd guifg=#a1b56c guibg=#202020
+highlight GitSignsAdd guifg=#84c270
 highlight! link GitSignsAddLn GitSignsAdd
 highlight! link GitSignsAddInline GitSignsAdd
-highlight GitSignsChange guifg=#ba8baf guibg=#202020
+highlight GitSignsChange guifg=#c2b370
 highlight! link GitSignsChangeLn GitSignsChange
 highlight! link GitSignsChangeInline GitSignsChange
-highlight GitSignsDelete guifg=#ab4642 guibg=#202020
+highlight GitSignsDelete guifg=#c27070
 highlight! link GitSignsDeleteLn GitSignsDelete
 highlight! link GitSignsDeleteInline GitSignsDelete
-highlight GitSignsUntracked guifg=#7cafc2 guibg=#202020
+highlight GitSignsUntracked guifg=#70a5c2
 highlight! link GitSignsUntrackedLn GitSignsUntracked
 highlight! link GitSignsUntrackedInline GitSignsUntracked
 highlight IndentBlanklineChar gui=nocombine guifg=#2b2b2b

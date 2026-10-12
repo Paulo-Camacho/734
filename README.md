@@ -23,25 +23,13 @@ are set apart by their border. The cursorline, completion menu and folds use
 
 ### lazy.nvim
 
-```lua
--- ~/.config/nvim/lua/plugins/734.lua
-return {
-  "Paulo-Camacho/734",
-  lazy = false,
-  priority = 1000,
-  config = function()
-    vim.cmd.colorscheme("734")
-  end,
-}
-```
+ ![s1](images/s1.png)
 
 ### vim.pack (Neovim 0.12+)
-
 ```lua
 -- ~/.config/nvim/init.lua
 vim.pack.add({ "https://github.com/Paulo-Camacho/734" })
 vim.cmd.colorscheme("734")
-or
 vim.cmd.colorscheme("734-light")
 ```
 
