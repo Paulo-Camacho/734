@@ -3,6 +3,8 @@
 A dark and light Neovim colorscheme with an orange cursor and orange yank flash.
 The dark variant sits on pure black.
 
+![734 dark and 734-light, split diagonally](images/hero.png)
+
 | variant | command | background | floats | cursor |
 | --- | --- | --- | --- | --- |
 | dark | `:colorscheme 734` | `#000000` | `#000000` | `#ff6900` |
@@ -37,25 +39,46 @@ its own hue so code reads at a glance, and punctuation is pushed back to grey.
 
 Every syntax color meets roughly WCAG AA (4.3:1 or better) against its background.
 
-<!-- screenshots: add images of both variants here -->
+## Screenshots
+
+Real Neovim captures: TypeScript with Tree-sitter, a ts_ls hover and
+diagnostic, a search hit, gitsigns and a custom statusline. Regenerate them
+with `scripts/screenshots/make.sh`.
+
+### Dark — `:colorscheme 734`
+
+![734 dark variant](images/734-dark.png)
+
+### Light — `:colorscheme 734-light`
+
+![734-light variant](images/734-light.png)
 
 ## Requirements
 
-- Neovim 0.10+
+- Neovim 0.11+ (the yank flash uses `vim.hl.on_yank`)
 - `termguicolors` on (the palette is 24-bit; cterm coverage is minimal)
 
 ## Install
 
 ### lazy.nvim
 
- ![s1](images/s1.png)
+```lua
+-- ~/.config/nvim/lua/plugins/734.lua
+return {
+  "Paulo-Camacho/734",
+  lazy = false,
+  priority = 1000,
+  config = function()
+    vim.cmd.colorscheme("734") -- or "734-light"
+  end,
+}
+```
 
 ### vim.pack (Neovim 0.12+)
 ```lua
 -- ~/.config/nvim/init.lua
 vim.pack.add({ "https://github.com/Paulo-Camacho/734" })
-vim.cmd.colorscheme("734")
-vim.cmd.colorscheme("734-light")
+vim.cmd.colorscheme("734") -- or "734-light"
 ```
 
 ### Manual

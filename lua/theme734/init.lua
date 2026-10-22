@@ -1,4 +1,5 @@
--- Extras a plain colorscheme file can't do on its own: route the cursor
+-- Loads the colorscheme (colors/734.lua and colors/734-light.lua call
+-- `load`), then adds what highlight groups alone can't do: route the cursor
 -- through the `Cursor` group (so it turns orange instead of inheriting the
 -- terminal's color) and flash yanks with `Yank734`.
 --
@@ -85,6 +86,43 @@ function M.attach()
 			vim.hl.on_yank({ higroup = "Yank734", timeout = 150 })
 		end,
 	})
+end
+
+-- variant is "dark" or "light"
+function M.load(variant)
+	vim.o.background = variant
+	vim.cmd("hi clear")
+	if vim.g.syntax_on then
+		vim.cmd("syntax reset")
+	end
+	vim.g.colors_name = variant == "light" and "734-light" or "734"
+
+	-- re-read the color files on every :colorscheme, like a .vim colorscheme
+	-- is re-sourced, so edits show up without restarting
+	package.loaded["theme734.palettes"] = nil
+	package.loaded["theme734.groups"] = nil
+	local c = require("theme734.palettes")[variant]
+	for name, spec in pairs(require("theme734.groups")(c, variant)) do
+		-- without this, nvim_set_hl copies gui attributes (bold, italic...)
+		-- into cterm; the groups list cterm explicitly where they want it
+		if not spec.link and not spec.cterm then
+			spec.cterm = {}
+		end
+		vim.api.nvim_set_hl(0, name, spec)
+	end
+
+	-- :terminal's 16 ANSI colors. On light, "black" is the text color and
+	-- "white" a mid grey, so programs printing either stay readable.
+	local dark = variant == "dark"
+	local terminal = {
+		dark and c.surface or c.fg, c.red, c.green, c.yellow, c.blue, c.pink, c.teal, dark and c.fg or c.subtle,
+		c.comment, c.red, c.green, c.yellow, c.blue, c.pink, c.teal, c.bright,
+	}
+	for i, color in ipairs(terminal) do
+		vim.g["terminal_color_" .. (i - 1)] = color
+	end
+
+	M.attach()
 end
 
 return M
