@@ -6,11 +6,36 @@ The dark variant sits on pure black.
 | variant | command | background | floats | cursor |
 | --- | --- | --- | --- | --- |
 | dark | `:colorscheme 734` | `#000000` | `#000000` | `#ff6900` |
-| light | `:colorscheme 734-light` | `#fcfcfc` | `#f2f2f2` | `#ff6900` |
+| light | `:colorscheme 734-light` | `#fdfaf6` | `#f4efe9` | `#ff6900` |
 
 In the dark variant, floating windows share the editor's black background and
-are set apart by their border. The cursorline, completion menu and folds use
-`#202020`.
+are set apart by a pink border (`#a3466b`). The cursorline, completion menu
+and folds use a warm `#1f1a16`.
+
+## Palette
+
+Pink is the theme's highlight color: keywords, titles, the selected tab,
+matching brackets, the current search hit and the normal-mode statusline all
+use it. The cursor's orange stays on the cursor, yank flash and cursor line
+number, and carries over to properties and fields. Every other syntax role gets
+its own hue so code reads at a glance, and punctuation is pushed back to grey.
+
+| role | dark | light |
+| --- | --- | --- |
+| keyword, `if`, `for`, `import` | `#f4a6c0` | `#b0306a` |
+| `return`, exceptions | `#ff5c57` | `#c4262e` |
+| function | `#5cb8ff` | `#0a5fc4` |
+| string | `#9bd36a` | `#2e7d32` |
+| type, module | `#4fd6be` | `#00766a` |
+| number, constant, boolean | `#c39bff` | `#7b3fb5` |
+| property, field | `#ff6900` | `#c94a00` |
+| builtin, macro, escape | `#ffcf5c` | `#8a5d00` |
+| operator | `#ffc2da` | `#9e4a6e` |
+| punctuation | `#8c8c8c` | `#6b655e` |
+| comment (italic) | `#737373` | `#7d766e` |
+| selection | `#3d1a2b` | `#ffd6e7` |
+
+Every syntax color meets roughly WCAG AA (4.3:1 or better) against its background.
 
 <!-- screenshots: add images of both variants here -->
 
