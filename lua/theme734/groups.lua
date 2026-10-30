@@ -669,8 +669,8 @@ return function(c, variant)
 	-- groups whose attributes, not just colors, differ between variants
 	local overrides = {
 		dark = {
-			StatusLine = { bg = "#000000", cterm = { reverse = true }, fg = "#b0b0b0" },
-			StatusLineNC = { bg = "#1f1a16", cterm = { bold = true, underline = true }, fg = "#505050" },
+			StatusLine = { bg = "#000000", cterm = { reverse = true }, fg = "#ffffff" },
+			StatusLineNC = { bg = "#000000", cterm = { bold = true, underline = true }, fg = "#505050" },
 			Visual = { bg = "#3d1a2b", ctermbg = 15, ctermfg = 0 },
 			VisualNOS = { fg = "#ff5c57" },
 		},
@@ -681,7 +681,7 @@ return function(c, variant)
 			RedrawDebugClear = { bg = "#6b5300", ctermbg = 11, ctermfg = 0 },
 			RedrawDebugComposed = { bg = "#005523", ctermbg = 10, ctermfg = 0 },
 			RedrawDebugRecompose = { bg = "#590008", ctermbg = 9, ctermfg = 0 },
-			StatusLine = { bg = "#000000", ctermbg = 0, ctermfg = 15, fg = "#fdfaf6" },
+			StatusLine = { bg = "#000000", ctermbg = 0, ctermfg = 15, fg = "#ffffff" },
 			StatusLineNC = { bg = "#000000", ctermbg = 0, ctermfg = 7, fg = "#8b8b8b" },
 			Visual = { bg = "#ffd6e7", ctermbg = 0, ctermfg = 15 },
 			VisualNOS = { bg = "#000000", blend = 0, ctermbg = 0, ctermfg = 15, fg = "#ffffff" },

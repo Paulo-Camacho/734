@@ -8,7 +8,7 @@ The dark variant sits on pure black.
 | variant | command | background | floats | cursor |
 | --- | --- | --- | --- | --- |
 | dark | `:colorscheme 734` | `#000000` | `#000000` | `#ff6900` |
-| light | `:colorscheme 734-light` | `#fdfaf6` | `#f4efe9` | `#ff6900` |
+| light | `:colorscheme 734-light` | `#ffffff` | `#ffffff` | `#ff6900` |
 
 In the dark variant, floating windows share the editor's black background and
 are set apart by a pink border (`#a3466b`). The cursorline, completion menu
