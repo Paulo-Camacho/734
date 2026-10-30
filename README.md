@@ -1,6 +1,6 @@
 # 734
 
-A dark and light Neovim colorscheme with an orange cursor and orange yank flash.
+a dark and light neovim colorscheme with an orange cursor and orange yank flash.
 The dark variant sits on pure black.
 
 ![734 dark and 734-light, split diagonally](images/hero.png)
@@ -10,13 +10,13 @@ The dark variant sits on pure black.
 | dark | `:colorscheme 734` | `#000000` | `#000000` | `#ff6900` |
 | light | `:colorscheme 734-light` | `#ffffff` | `#ffffff` | `#ff6900` |
 
-In the dark variant, floating windows share the editor's black background and
+in the dark variant, floating windows share the editor's black background and
 are set apart by a pink border (`#a3466b`). The cursorline, completion menu
 and folds use a warm `#1f1a16`.
 
-## Palette
+**palette**
 
-Pink is the theme's highlight color: keywords, titles, the selected tab,
+pink is the theme's highlight color: keywords, titles, the selected tab,
 matching brackets, the current search hit and the normal-mode statusline all
 use it. The cursor's orange stays on the cursor, yank flash and cursor line
 number, and carries over to properties and fields. Every other syntax role gets
@@ -37,30 +37,29 @@ its own hue so code reads at a glance, and punctuation is pushed back to grey.
 | comment (italic) | `#737373` | `#7d766e` |
 | selection | `#3d1a2b` | `#ffd6e7` |
 
-Every syntax color meets roughly WCAG AA (4.3:1 or better) against its background.
+every syntax color meets roughly wcag aa (4.3:1 or better) against its background.
 
-## Screenshots
+**screenshots**
 
-Real Neovim captures: TypeScript with Tree-sitter, a ts_ls hover and
-diagnostic, a search hit, gitsigns and a custom statusline. Regenerate them
+real neovim captures: typescript with tree-sitter, a ts_ls hover and
+diagnostic, a search hit, gitsigns and a custom statusline. regenerate them
 with `scripts/screenshots/make.sh`.
 
-### Dark — `:colorscheme 734`
+**dark** — `:colorscheme 734`
 
 ![734 dark variant](images/734-dark.png)
 
-### Light — `:colorscheme 734-light`
+**light** — `:colorscheme 734-light`
 
 ![734-light variant](images/734-light.png)
 
-## Requirements
+**requirements**
 
-- Neovim 0.11+ (the yank flash uses `vim.hl.on_yank`)
+- neovim 0.11+ (the yank flash uses `vim.hl.on_yank`)
 - `termguicolors` on (the palette is 24-bit; cterm coverage is minimal)
 
-## Install
 
-### lazy.nvim
+**installing with lazy.nvim**
 
 ```lua
 -- ~/.config/nvim/lua/plugins/734.lua
@@ -74,36 +73,39 @@ return {
 }
 ```
 
-### vim.pack (Neovim 0.12+)
+**installing with vim.pack (Neovim 0.12+)**
 ```lua
 -- ~/.config/nvim/init.lua
 vim.pack.add({ "https://github.com/Paulo-Camacho/734" })
 vim.cmd.colorscheme("734") -- or "734-light"
 ```
 
-### Manual
+**manual install**
 
-Copy `colors/` and `lua/` into `~/.config/nvim/`.
+copy `colors/` and `lua/` into `~/.config/nvim/`.
+```bash
+cp -R colors/ ~/.config/nvim/
+```
 
-## Orange cursor and yank
+**orange cursor and yank**
 
-The cursor and yank flash are `#ff6900` in both variants. Loading either one
+the cursor and yank flash are `#ff6900` in both variants. Loading either one
 also:
 
 - attaches the `Cursor` group to `'guicursor'` so Neovim, not the terminal,
-  colors the cursor. Skipped if your `'guicursor'` already names `Cursor` or
+  colors the cursor. skipped if your `'guicursor'` already names `cursor` or
   `lCursor`, or is empty. Re-applied if you change `'guicursor'` later.
-  Needs `termguicolors` on, and your terminal must support OSC 12 (kitty,
-  WezTerm, Ghostty, foot, Alacritty, iTerm2 do).
+  Needs `termguicolors` on, and your terminal must support osc 12 (kitty,
+  wezTerm, ghostty, foot, alacritty, iterm2 do).
 - flashes yanked text with the `Yank734` group.
 
-Opt out before loading the colorscheme:
+opt out before loading the colorscheme:
 
 ```lua
 vim.g.theme734_cursor = false -- leave 'guicursor' alone
 vim.g.theme734_yank = false   -- no yank flash (use this if you already have a TextYankPost highlight)
 ```
 
-## License
+**license**
 
-MIT
+mit
