@@ -26,14 +26,14 @@ its own hue so code reads at a glance, and punctuation is pushed back to grey.
 | --- | --- | --- |
 | keyword, `if`, `for`, `import` | `#f4a6c0` | `#b0306a` |
 | `return`, exceptions | `#ff5c57` | `#c4262e` |
-| function | `#5cb8ff` | `#0a5fc4` |
+| function, HTML/JSX tag | `#5cb8ff` | `#0a5fc4` |
 | string | `#9bd36a` | `#2e7d32` |
 | type, module | `#4fd6be` | `#00766a` |
 | number, constant, boolean | `#c39bff` | `#7b3fb5` |
-| property, field | `#ff6900` | `#c94a00` |
+| property, field, tag attribute | `#ff6900` | `#c94a00` |
 | builtin, macro, escape | `#ffcf5c` | `#8a5d00` |
 | operator | `#ffc2da` | `#9e4a6e` |
-| punctuation | `#8c8c8c` | `#6b655e` |
+| punctuation, `<` `>` `=` in tags | `#8c8c8c` | `#6b655e` |
 | comment (italic) | `#737373` | `#7d766e` |
 | selection | `#3d1a2b` | `#ffd6e7` |
 
