@@ -13,8 +13,8 @@ from pathlib import Path
 
 # window chrome and the cursor, per variant; everything else comes from the capture
 THEME = {
-    "dark": {"bg": "#000000", "fg": "#d4d4d4", "bar": "#14110f", "title": "#8c8c8c",
-             "edge": "rgba(255,255,255,.09)", "cursor": "#ff6900", "on_cursor": "#000000"},
+    "dark": {"bg": "#161719", "fg": "#c5c8c6", "bar": "#000000", "title": "#c5c8c6",
+             "edge": "rgba(255,255,255,.09)", "cursor": "#d0d0d0", "on_cursor": "#151515"},
     "light": {"bg": "#fdfaf6", "fg": "#241f31", "bar": "#efe8e0", "title": "#6b655e",
               "edge": "rgba(0,0,0,.10)", "cursor": "#ff6900", "on_cursor": "#14171c"},
 }

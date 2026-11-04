@@ -699,10 +699,10 @@ return function(c, variant)
 	-- groups whose attributes, not just colors, differ between variants
 	local overrides = {
 		dark = {
-			StatusLine = { bg = "#000000", cterm = { reverse = true }, fg = "#ffffff" },
-			StatusLineNC = { bg = "#000000", cterm = { bold = true, underline = true }, fg = "#505050" },
-			Visual = { bg = "#3d1a2b", ctermbg = 15, ctermfg = 0 },
-			VisualNOS = { fg = "#ff5c57" },
+			StatusLine = { bg = c.bar_bg, cterm = { reverse = true }, fg = c.bar_fg },
+			StatusLineNC = { bg = c.bar_nc_bg, cterm = { bold = true, underline = true }, fg = c.bar_nc_fg },
+			Visual = { bg = c.selection, ctermbg = 15, ctermfg = 0, fg = c.fg },
+			VisualNOS = { fg = c.red },
 		},
 		light = {
 			DiagnosticDeprecated = { cterm = { strikethrough = true }, sp = "#ffc0b9", strikethrough = true },

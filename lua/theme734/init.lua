@@ -1,6 +1,6 @@
 -- Loads the colorscheme (colors/734.lua and colors/734-light.lua call
 -- `load`), then adds what highlight groups alone can't do: route the cursor
--- through the `Cursor` group (so it turns orange instead of inheriting the
+-- through the `Cursor` group (so it takes the theme color instead of the
 -- terminal's color) and flash yanks with `Yank734`.
 --
 -- Opt out before `:colorscheme 734`:
@@ -78,7 +78,7 @@ function M.attach()
 	})
 	vim.api.nvim_create_autocmd("TextYankPost", {
 		group = group,
-		desc = "734: orange yank flash",
+		desc = "734: yank flash",
 		callback = function()
 			if vim.g.theme734_yank == false or not is_734() then
 				return
@@ -111,11 +111,11 @@ function M.load(variant)
 		vim.api.nvim_set_hl(0, name, spec)
 	end
 
-	-- :terminal's 16 ANSI colors. On light, "black" is the text color and
-	-- "white" a mid grey, so programs printing either stay readable.
-	local dark = variant == "dark"
-	local terminal = {
-		dark and c.surface or c.fg, c.red, c.green, c.yellow, c.blue, c.pink, c.teal, dark and c.fg or c.subtle,
+	-- :terminal's 16 ANSI colors. Dark takes them straight from the palette.
+	-- On light, "black" is the text color and "white" a mid grey, so programs
+	-- printing either stay readable.
+	local terminal = c.ansi or {
+		c.fg, c.red, c.green, c.yellow, c.blue, c.pink, c.teal, c.subtle,
 		c.comment, c.red, c.green, c.yellow, c.blue, c.pink, c.teal, c.bright,
 	}
 	for i, color in ipairs(terminal) do
