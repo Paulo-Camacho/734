@@ -16,10 +16,11 @@ folds use black.
 
 **palette**
 
-every dark color comes from Ghostty's Atom theme (the diff backgrounds are
-blends of it). A terminal theme only names 16 colors, so the syntax roles below
-are this theme's choice of slots. In the light variant, pink is the highlight
-color and the cursor's orange carries over to properties and fields.
+every dark color comes from Ghostty's Atom theme (the diff backgrounds and the
+dimmed purple tag punctuation are blends of it). A terminal theme only names 16
+colors, so the syntax roles below are this theme's choice of slots. In the
+light variant, pink is the highlight color and the cursor's orange carries over
+to properties and fields.
 
 | role | dark | light |
 | --- | --- | --- |
@@ -29,10 +30,12 @@ color and the cursor's orange carries over to properties and fields.
 | string | `#87c38a` | `#2e7d32` |
 | type, module | `#f5ffa8` | `#00766a` |
 | number, constant, boolean | `#ffd7b1` | `#7b3fb5` |
-| property, field, tag attribute | `#96cbfe` | `#c94a00` |
+| property, field | `#96cbfe` | `#c94a00` |
+| HTML/JSX/XML tag attribute | `#ffd7b1` | `#c94a00` |
 | builtin, macro, escape | `#94fa36` | `#8a5d00` |
 | operator | `#e0e0e0` | `#9e4a6e` |
-| punctuation, `<` `>` `=` in tags | `#c5c8c6` | `#6b655e` |
+| punctuation | `#c5c8c6` | `#6b655e` |
+| `<` `>` `/>` `=` in tags | `#807ead` | `#8f5cc0` |
 | comment (italic) | `#4c4c4c` | `#7d766e` |
 | selection | `#444444` | `#ffd6e7` |
 

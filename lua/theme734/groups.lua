@@ -4,6 +4,7 @@
 -- to what Neovim and its syntax files already define.
 return function(c, variant)
 	local groups = {
+		["@keyword.exception"] = { fg = c.red },
 		["@keyword.return"] = { fg = c.red },
 		["@lsp.mod.deprecated"] = { fg = c.red },
 		["@lsp.type.variable"] = { fg = c.fg },
@@ -17,8 +18,10 @@ return function(c, variant)
 		["@markup.heading.6"] = { link = "markdownH6" },
 		["@string.special.vimdoc"] = { link = "SpecialChar" },
 		-- markup (HTML, JSX, XML, Vue): each piece of a tag gets its own hue so
-		-- `<a href="...">` reads as tag / attribute / value, with `<`, `>` and `=`
-		-- pushed back to grey and element text left in the plain foreground
+		-- `<a href="...">` reads as tag (blue) / attribute (warm) / value (green),
+		-- with `<`, `>` and `=` in a dimmed purple that frames each tag without
+		-- outshining element text
+		["@constant.html"] = { link = "Keyword" }, -- <!DOCTYPE html>
 		["@markup.heading.1.html"] = { link = "@markup.heading.html" },
 		["@markup.heading.2.html"] = { link = "@markup.heading.html" },
 		["@markup.heading.3.html"] = { link = "@markup.heading.html" },
@@ -27,13 +30,13 @@ return function(c, variant)
 		["@markup.heading.6.html"] = { link = "@markup.heading.html" },
 		["@markup.heading.html"] = { bold = true, fg = c.fg },
 		["@markup.link.label.html"] = { fg = c.fg },
-		["@operator.html"] = { link = "Delimiter" },
+		["@operator.html"] = { link = "@tag.delimiter" },
 		["@string.special.url.html"] = { fg = c.green, underline = true },
 		["@symbol"] = { fg = c.purple },
 		["@tag"] = { fg = c.blue },
-		["@tag.attribute"] = { fg = c.property },
+		["@tag.attribute"] = { fg = c.attribute },
 		["@tag.builtin"] = { link = "@tag" },
-		["@tag.delimiter"] = { link = "Delimiter" },
+		["@tag.delimiter"] = { fg = c.tag_punct },
 		["@text.emphasis"] = { italic = true },
 		["@text.strike"] = { strikethrough = true },
 		["@text.strong"] = { bold = true },

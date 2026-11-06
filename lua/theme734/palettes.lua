@@ -30,6 +30,8 @@ return {
 		yellow = "#94fa36", -- ansi 10, builtins, macros, escapes
 		operator = "#e0e0e0",
 		punct = "#c5c8c6",
+		tag_punct = "#807ead", -- pink blended 65% into bg: `<`, `>`, `=` in tags
+		attribute = "#ffd7b1", -- ansi 3, tag attributes stand apart from blue tags
 		comment = "#4c4c4c", -- ansi 8
 		orange = "#ffd7b1",
 		brown = "#ffd7b1",
@@ -98,6 +100,8 @@ return {
 		yellow = "#8a5d00",
 		operator = "#9e4a6e",
 		punct = "#6b655e",
+		tag_punct = "#8f5cc0", -- purple blended 85% into bg: `<`, `>`, `=` in tags
+		attribute = "#c94a00",
 		comment = "#7d766e",
 		orange = "#c94a00",
 		brown = "#8a5a35",
