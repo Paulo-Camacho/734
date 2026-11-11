@@ -1,46 +1,42 @@
 # 734
 
-a dark and light neovim colorscheme. The dark variant matches Ghostty's built-in
-Atom theme; the light variant has an orange cursor and orange yank flash.
+a dark and light neovim colorscheme. both share an orange cursor and yank flash (`#d77757`). The statusline is black with white text in dark and blends
+into the white editor in light.
 
 ![734 dark and 734-light, split diagonally](images/hero.png)
 
 | variant | command | background | floats | cursor |
 | --- | --- | --- | --- | --- |
-| dark | `:colorscheme 734` | `#161719` | `#161719` | `#d0d0d0` |
-| light | `:colorscheme 734-light` | `#ffffff` | `#ffffff` | `#ff6900` |
+| dark | `:colorscheme 734` | `#161719` | `#161719` | `#d77757` |
+| light | `:colorscheme 734-light` | `#ffffff` | `#ffffff` | `#d77757` |
 
-in the dark variant, floating windows share the editor's background and are
-set apart by a grey border (`#4c4c4c`). The cursorline, completion menu and
-folds use black.
+in both variants, floating windows share the editor's background and are set
+apart by a grey border. The cursorline, completion menu and folds sit on a
+second surface: black in dark, a pale lavender-grey in light.
 
 **palette**
 
-every dark color comes from Ghostty's Atom theme (the diff backgrounds and the
-dimmed purple tag punctuation are blends of it). A terminal theme only names 16
-colors, so the syntax roles below are this theme's choice of slots. In the
-light variant, pink is the highlight color and the cursor's orange carries over
-to properties and fields.
+the light variant mirrors dark role for role: the same hue plays the same part, darkened until it reads on white.
 
 | role | dark | light |
 | --- | --- | --- |
-| keyword, `if`, `for`, `import` | `#b9b6fc` | `#b0306a` |
-| `return`, exceptions | `#fd5ff1` | `#c4262e` |
+| keyword, `if`, `for`, `import` | `#b9b6fc` | `#5b43d6` |
+| `return`, exceptions, errors | `#fd5ff1` | `#bd1a9c` |
 | function, HTML/JSX tag | `#85befd` | `#0a5fc4` |
-| string | `#87c38a` | `#2e7d32` |
-| type, module | `#f5ffa8` | `#00766a` |
-| number, constant, boolean | `#ffd7b1` | `#7b3fb5` |
-| property, field | `#96cbfe` | `#c94a00` |
-| HTML/JSX/XML tag attribute | `#ffd7b1` | `#c94a00` |
-| builtin, macro, escape | `#94fa36` | `#8a5d00` |
-| operator | `#e0e0e0` | `#9e4a6e` |
-| punctuation | `#c5c8c6` | `#6b655e` |
-| `<` `>` `/>` `=` in tags | `#807ead` | `#8f5cc0` |
-| comment (italic) | `#4c4c4c` | `#7d766e` |
-| selection | `#444444` | `#ffd6e7` |
+| string | `#87c38a` | `#0f7a52` |
+| type, module, constructor | `#f5ffa8` | `#7d6000` |
+| number, constant, boolean | `#ffd7b1` | `#b04400` |
+| property, field | `#96cbfe` | `#17709e` |
+| HTML/JSX/XML tag attribute | `#ffd7b1` | `#b04400` |
+| builtin, macro, escape | `#94fa36` | `#4f7700` |
+| operator | `#e0e0e0` | `#241f31` |
+| punctuation, variable | `#c5c8c6` | `#241f31` |
+| `<` `>` `/>` `=` in tags | `#807ead` | `#745fdc` |
+| comment (italic) | `#80848b` | `#6c6873` |
+| selection | `#444444` | `#e2e0f6` |
 
-every syntax color meets roughly wcag aa (4.3:1 or better) against its
-background, except dark comments, which keep Atom's `#4c4c4c` (about 2:1).
+every syntax color meets wcag aa against its background: 4.7:1 or better in
+both variants, comments and tag punctuation included.
 
 **screenshots**
 
@@ -59,7 +55,7 @@ with `scripts/screenshots/make.sh`.
 **requirements**
 
 - neovim 0.11+ (the yank flash uses `vim.hl.on_yank`)
-- `termguicolors` on (the palette is 24-bit; cterm coverage is minimal)
+- `termguicolors` on (the palette is 24-bit; there are no cterm colors)
 
 
 **installing with lazy.nvim**
@@ -92,14 +88,14 @@ cp -R colors/ ~/.config/nvim/
 
 **cursor and yank**
 
-the cursor and yank flash are `#d0d0d0` in the dark variant and `#ff6900` in the
-light variant. Loading either one also:
+both variants use `#d77757` for the cursor and yank flash. Loading either one
+also:
 
-- attaches the `Cursor` group to `'guicursor'` so Neovim, not the terminal,
-  colors the cursor. skipped if your `'guicursor'` already names `cursor` or
-  `lCursor`, or is empty. Re-applied if you change `'guicursor'` later.
-  Needs `termguicolors` on, and your terminal must support osc 12 (kitty,
-  wezTerm, ghostty, foot, alacritty, iterm2 do).
+- appends `a:Cursor/lCursor` to `'guicursor'` so Neovim, not the terminal,
+  colors the cursor in every mode. Skipped if `'guicursor'` is empty or already
+  uses `Cursor/lCursor`; set `'guicursor'` before the colorscheme. Needs
+  `termguicolors` and a terminal with osc 12 support (kitty, wezterm, ghostty,
+  foot, alacritty, iterm2).
 - flashes yanked text with the `Yank734` group.
 
 opt out before loading the colorscheme:

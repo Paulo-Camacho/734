@@ -1,9 +1,7 @@
 -- Sets up the screenshot scene once ts_ls has attached and published its
 -- diagnostics: a search for CONTRAST_MIN, the cursor on a call to
 -- `contrast`, and its hover float. Writes $SHOT_DONE when ready.
-if vim.env.SHOT_VARIANT == "light" then
-	vim.cmd.colorscheme("734-light")
-end
+vim.cmd.colorscheme(vim.env.SHOT_VARIANT == "light" and "734-light" or "734")
 
 local function ready()
 	vim.cmd("let @/ = 'CONTRAST_MIN' | set hlsearch")

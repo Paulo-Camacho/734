@@ -1,67 +1,39 @@
 -- Palette for each variant. Groups (lua/theme734/groups.lua) refer to these
--- by name, so a color changed here changes everywhere it's used.
-return {
+-- by name, so a color changed here changes everywhere it's used. Light mirrors
+-- dark role for role: the same hue plays the same part in both.
+
+-- shared by both variants: Claude Code's orange cursor
+local common = {
+	black = "#000000",
+	cursor = "#d77757",
+	on_cursor = "#000000",
+}
+
+local palettes = {
 	-- dark is Ghostty's built-in "Atom" theme. Comments give the ANSI slot;
-	-- nothing here is off-theme except the diff tints, which are blends.
+	-- only the comment grey and the blends are off-theme.
 	dark = {
 		bg = "#161719", -- background
 		fg = "#c5c8c6", -- foreground
-		surface = "#000000", -- ansi 0
-		surface2 = "#444444", -- selection-background
-		float_bg = "#161719",
-		float_border = "#4c4c4c", -- ansi 8
-		colorcolumn = "#000000",
-		selection = "#444444", -- selection-background
-		split = "#444444",
-		indent = "#444444",
-		dim = "#4c4c4c", -- ansi 8
+		surface = "#000000", -- ansi 0: cursorline, menus, folds
+		surface2 = "#444444", -- selection-background: selection, splits, guides
+		dim = "#4c4c4c", -- ansi 8: borders, relative line numbers, whitespace
+		comment = "#80848b", -- Atom's ansi 8 is 2:1 on bg, this is 4.8:1
 		subtle = "#c5c8c6",
-		bright = "#e0e0e0", -- ansi 7/15
-		cursor = "#d0d0d0", -- cursor-color
-		on_cursor = "#151515", -- cursor-text
-		black = "#000000",
-		pink = "#b9b6fc", -- ansi 5/13, keywords and accent
-		red = "#fd5ff1", -- ansi 1/9
-		blue = "#85befd", -- ansi 4/6/14
-		green = "#87c38a", -- ansi 2
-		teal = "#f5ffa8", -- ansi 11, types
-		purple = "#ffd7b1", -- ansi 3, numbers and constants
-		property = "#96cbfe", -- ansi 12
-		yellow = "#94fa36", -- ansi 10, builtins, macros, escapes
-		operator = "#e0e0e0",
-		punct = "#c5c8c6",
-		tag_punct = "#807ead", -- pink blended 65% into bg: `<`, `>`, `=` in tags
-		attribute = "#ffd7b1", -- ansi 3, tag attributes stand apart from blue tags
-		comment = "#4c4c4c", -- ansi 8
-		orange = "#ffd7b1",
-		brown = "#ffd7b1",
-		quickfix = "#85befd",
-		on_accent = "#000000",
-		on_search = "#000000",
-		on_error = "#000000",
+		bright = "#e0e0e0", -- ansi 7/15, operators
+		on_accent = "#000000", -- text on a syntax color used as background
+		purple = "#b9b6fc", -- ansi 5/13, keywords and accent
+		red = "#fd5ff1", -- ansi 1/9, `return`, exceptions, errors
+		blue = "#85befd", -- ansi 4/6/14, functions and tags
+		green = "#87c38a", -- ansi 2, strings
+		yellow = "#f5ffa8", -- ansi 11, types and modules
+		orange = "#ffd7b1", -- ansi 3, numbers, constants, tag attributes
+		property = "#96cbfe", -- ansi 12, properties and fields
+		lime = "#94fa36", -- ansi 10, builtins, macros, escapes
+		tag_punct = "#807ead", -- purple blended 65% into bg: `<`, `>`, `=` in tags
 		search_bg = "#f5ffa8",
-		error_bg = "#fd5ff1",
-		pink_bg = "#b9b6fc",
-		blue_bg = "#85befd",
-		purple_bg = "#b9b6fc",
-		green_bg = "#87c38a",
-		teal_bg = "#85befd",
-		brown_bg = "#ffd7b1",
-		bar_fg = "#e0e0e0",
-		bar_bg = "#000000",
-		bar_nc_fg = "#4c4c4c",
-		bar_nc_bg = "#000000",
-		devinfo_fg = "#c5c8c6",
-		h1 = "#ffd7b1",
-		h2 = "#f5ffa8",
-		h4 = "#85befd",
-		h5 = "#96cbfe",
-		h6 = "#c5c8c6",
-		plugin_border = "#4c4c4c",
-		indentscope = "#4c4c4c",
-		icon_blue = "#85befd",
-		icon_grey = "#e0e0e0",
-		jump_ahead = "#e0e0e0",
+		bar_bg = "#000000", -- statusline: black with white text
+		bar_fg = "#ffffff",
 		-- diff backgrounds: the accent blended into bg, so syntax shows through
 		diff_add = "#2a362d", -- green 18%
 		diff_delete = "#402440", -- red 18%
@@ -73,68 +45,44 @@ return {
 			"#4c4c4c", "#fd5ff1", "#94fa36", "#f5ffa8", "#96cbfe", "#b9b6fc", "#85befd", "#e0e0e0",
 		},
 	},
+	-- every syntax color is at least 5.3:1 on bg and 4.7:1 on surface
 	light = {
 		bg = "#ffffff",
 		fg = "#241f31",
-		surface = "#ffffff",
-		surface2 = "#eee6dd",
-		float_bg = "#ffffff",
-		float_border = "#e39abb",
-		colorcolumn = "#ffffff",
-		selection = "#ffd6e7",
-		split = "#e3d8cc",
-		indent = "#e2d6ca",
-		dim = "#7d766e",
-		subtle = "#6b655e",
+		surface = "#f3f2f8",
+		surface2 = "#e2e0f6",
+		dim = "#a8a5b0",
+		comment = "#6c6873",
+		subtle = "#6c6873",
 		bright = "#241f31",
-		cursor = "#ff6900",
-		on_cursor = "#14171c",
-		black = "#000000",
-		pink = "#b0306a",
-		red = "#c4262e",
+		on_accent = "#ffffff",
+		purple = "#5b43d6",
+		red = "#bd1a9c",
 		blue = "#0a5fc4",
-		green = "#2e7d32",
-		teal = "#00766a",
-		purple = "#7b3fb5",
-		property = "#c94a00",
-		yellow = "#8a5d00",
-		operator = "#9e4a6e",
-		punct = "#6b655e",
-		tag_punct = "#8f5cc0", -- purple blended 85% into bg: `<`, `>`, `=` in tags
-		attribute = "#c94a00",
-		comment = "#7d766e",
-		orange = "#c94a00",
-		brown = "#8a5a35",
-		quickfix = "#007373",
-		on_accent = "#241f31",
-		on_search = "#241f31",
-		on_error = "#ffffff",
+		green = "#0f7a52",
+		yellow = "#7d6000",
+		orange = "#b04400",
+		property = "#17709e",
+		lime = "#4f7700",
+		tag_punct = "#745fdc", -- purple blended 85% into bg
 		search_bg = "#ffe28a",
-		error_bg = "#ed333b",
-		pink_bg = "#ff7eb3",
-		blue_bg = "#99c1f1",
-		purple_bg = "#dc8add",
-		green_bg = "#8ff0a4",
-		teal_bg = "#8ff0a4",
-		brown_bg = "#cdab8f",
-		bar_fg = "#ffffff",
-		bar_bg = "#000000",
-		bar_nc_fg = "#8b8b8b",
-		bar_nc_bg = "#000000",
-		devinfo_fg = "#cbbfb3",
-		h1 = "#0a5fc4",
-		h2 = "#813d9c",
-		h4 = "#c94a00",
-		h5 = "#8a5a35",
-		h6 = "#6b655e",
-		plugin_border = "#e2d6ca",
-		indentscope = "#cbbfb3",
-		icon_blue = "#0a5fc4",
-		icon_grey = "#6b655e",
-		jump_ahead = "#6b655e",
-		diff_add = "#e0e8db", -- green 14%
-		diff_delete = "#f6dedc", -- red 13%
-		diff_change = "#f1e9f0", -- purple 9%
-		diff_text = "#e8dcec", -- purple 16%
+		bar_bg = "#ffffff", -- statusline: same as the editor
+		bar_fg = "#241f31",
+		diff_add = "#ddece7", -- green 14%
+		diff_delete = "#f7e4f3", -- red 12%
+		diff_change = "#e9f1fa", -- blue 9%
+		diff_text = "#cedff3", -- blue 20%
+		-- "black" is the text color and "white" a mid grey, so programs
+		-- printing either stay readable
+		ansi = {
+			"#241f31", "#bd1a9c", "#0f7a52", "#b04400", "#0a5fc4", "#5b43d6", "#17709e", "#6c6873",
+			"#a8a5b0", "#bd1a9c", "#4f7700", "#7d6000", "#17709e", "#5b43d6", "#0a5fc4", "#241f31",
+		},
 	},
 }
+
+for name, palette in pairs(palettes) do
+	palettes[name] = vim.tbl_extend("error", common, palette)
+end
+
+return palettes
