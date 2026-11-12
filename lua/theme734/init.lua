@@ -1,14 +1,14 @@
--- Loads the colorscheme (colors/734.lua and colors/734-light.lua call `load`).
--- Besides highlight groups, it routes the cursor through `Cursor` so the
--- theme, not the terminal, colors it, and flashes yanks with `Yank734`.
+-- loads the colorscheme (colors/734.lua and colors/734-light.lua call `load`).
+-- besides highlight groups, it routes the cursor through `cursor` so the
+-- theme, not the terminal, colors it, and flashes yanks with `yank734`.
 --
--- Opt out before `:colorscheme 734`:
+-- options `:colorscheme 734`:
 --   vim.g.theme734_cursor = false  -- leave 'guicursor' alone
 --   vim.g.theme734_yank = false    -- no yank flash
 
 local M = {}
 
--- variant is "dark" or "light"
+-- variant is "dark" or "light" - just write 734 for dark mode and add -light for lightmode
 function M.load(variant)
 	vim.o.background = variant
 	vim.cmd("hi clear")
