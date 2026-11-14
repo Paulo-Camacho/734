@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Regenerates images/734-dark.png, images/734-light.png and images/hero.png
-# from your real nvim setup. Needs tmux, chromium, ImageMagick, ts_ls and
-# JetBrainsMono Nerd Font.
+# regenerates images/734-dark.png, images/734-light.png and images/hero.png
+# from your real nvim setup. needs tmux, chromium, ImageMagick, ts_ls and
+# we're using JetBrainsMono Nerd Font.
 set -euo pipefail
 here=$(cd "$(dirname "$0")" && pwd)
 images=$here/../../images

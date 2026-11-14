@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Runs your real nvim (config, plugins, statusline) on the sample project in a
+# bash to capture real nvim (config, plugins, statusline) on the sample project in a
 # detached tmux pane and saves the screen, with colors, as ANSI text.
-#   capture.sh <dark|light> <out.ansi>
+# capture.sh <dark|light> <out.ansi>
 set -euo pipefail
 here=$(cd "$(dirname "$0")" && pwd)
 variant=$1 out=$2
